@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>Weather App</title>
+</head>
+
+<body onload="onLoad()">
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/images/logo.svg" class="nav__logo-img" alt="Logo App Weather">
+                Weather App
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="section__search">
+            <div class="search container">
+                <form class="search__form">
+                    <div class="input__group">
+                        <input type="text" class="search__input" name="search" placeholder="Enter the city"
+                            id="search-input" required>
+                        <button type="submit" id="search-button" class="search__button">Search</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="section__weather" id="weather">
+            <div class="weather__ubication">
+                <h1 class="weather__city" id="city"></h1>
+                <p class="weather__date" id="current-date"></p>
+            </div>
+            <div class="weather container">
+                <div class="weather__container">
+                    <div class="weather__info">
+                        <div class="weather__item">
+                            <img class="weather__icon" src="" alt="" id="weather-icon">
+                            <h1 class="weather__temperature" id="temperature-value"></h1>
+                            <p class="weather__desc" id="temperature-desc"></p>
+                        </div>
+                    </div>
+                    <div class="weather__details">
+                        <ul>
+                            <li id="wind"></li>
+                            <li id="feels"></li>
+                            <li id="humidity"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer container">
+        <span class="footer__text">Created by <a class="footer__link" href="https://github.com/Brayanro" target="_blank"
+                rel="noopener">Brayan Rodriguez Montealegre</a></span>
+    </footer>
+    <script src="assets/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

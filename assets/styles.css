@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --header-height: 3.5rem;
+    --color-primary: #71aed3;
+    --color-secondary: #a5d6ea;
+    --hover: #d7e8f1;
+    --text: #f9f9ff;
+    --font: 'Poppins', sans-serif;
+    --font-bold: 500;
+    --normal-font-size: 1rem;
+    --small-font-size: .813rem;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--font);
+    color: var(--text);
+    background-color: var(--color-primary);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--hover);
+}
+
+.container {
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.header {
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: var(--text);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-bold);
+}
+
+.nav__logo-img{
+    width: 3.3rem;
+}
+
+.section__search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 2rem;
+    font-family: var(--font);
+}
+
+.input__group{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.search__input{
+    width: 250px;
+    background-color: var(--text);
+    padding: 1rem 1rem;
+    border-radius: .25rem;
+}
+
+.search__button{
+    background-color: var(--color-secondary);
+    border-radius: .25rem;
+    padding: .75rem;
+    margin-top: .5rem;
+    color: var(--text);
+    font-family: var(--font);
+    font-size: .94rem;
+    font-weight: var(--font-bold);
+}
+
+.section__weather{
+    text-align: center;
+    color: var(--text);
+}
+
+.weather{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.weather__container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.weather__item{
+    margin-top: 2rem;
+}
+
+.weather__icon{
+    width: 160px;
+    height: 160px;
+}
+
+.weather__city{
+    font-size: 2rem;
+}
+
+.weather__date, .weather__desc{
+    font-size: 1.1rem;
+    font-weight: var(--font-bold);
+}
+
+.weather__temperature{
+    font-size: 3rem;
+}
+
+.weather__details{
+    padding-top: 1rem;
+    font-weight: var(--font-bold);
+}
+
+.weather__details ul > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
+.weather__feels, .weather__wind, .weather__humidity{
+    width: 1.5rem;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer__text, .footer__link{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-bold);
+}
+
+.footer__link{
+    color: var(--text);
+}
+
+@media screen and (min-width: 767px) {
+    .search__input{
+        width: 400px;
+    }
+
+    .weather__icon{
+        width: 280px;
+        height: 280px;
+    }
+    
+    .footer__text, .footer__link{
+        font-size: var(--normal-font-size);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav{
+        height: calc(var(--header-height) + 1rem);
+    }
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search__input{
+        width: 640px;
+    }
+
+    .search__button{
+        font-size: var(--normal-font-size);
+    }
+
+    .weather__city{
+        font-size: 2.5rem;
+    }
+
+    .weather__date, .weather__desc{
+        font-size: 1.3rem;
+    }
+
+    .weather__container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .weather__icon{
+        width: 300px;
+        height: 300px;
+    }
+
+    .weather__info{
+        margin-top: -1.5rem;
+    }
+
+    .weather__details{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .weather__details ul > li{
+        font-size: 1.25rem;
+    }
+
+    .weather__feels, .weather__wind, .weather__humidity{
+        width: 3.5rem;
+    }
+
+    .footer__text{
+        padding-top: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nav__logo{
+        margin-left: -4rem;
+    }
+}
